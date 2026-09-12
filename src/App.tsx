@@ -9,7 +9,7 @@ import type { Itechnology } from './types/technologyType';
 
 const technologyFetch=async():Promise<Itechnology[]>=>{
 const res=await fetch('/data.json');
-const data=res.json();
+const data= await res.json();
 return data;
 }
 function App() {
@@ -22,6 +22,7 @@ function App() {
       <Suspense fallback={<h2>Loading........</h2>}>
         <Technology technologyPromise={technologyPromise}></Technology>
       </Suspense>
+      
     </>
   )
 }
