@@ -2,20 +2,23 @@ import React, { useState } from 'react';
 import type { Itechnology } from '../types/technologyType';
 import TechnologyCard from './TechnologyCard';
 import SelectedTechnology from './SelectedTechnology';
+import { toast } from 'react-toastify';
 
 const AvailableTechnology = ({technologys}) => {
    const [selectedTechnology,setSelectedTechnology]=useState([])
    const handleAddToStack=(technology)=>{
     setSelectedTechnology((selectedTechnology)=>[...selectedTechnology,technology])
-
+    toast.success(`${technology.name} added to stack`);
    }
    const handleRemove = (id: string) => {
     setSelectedTechnology((selectedTechnology) =>
       selectedTechnology.filter((technology) => technology.id !== id)
     );
+    toast.success('Technology removed to stack');
   };
   const handleRemoveAll = () => {
     setSelectedTechnology([]);
+    toast.success('All Technology removed to stack');
   };
 
     
