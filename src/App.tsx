@@ -2,11 +2,10 @@
 import { Suspense } from 'react';
 import './App.css'
 import Banner from './components/Banner'
-
 import Navbar from './components/Navbar'
 import Technology from './components/technology/Technology';
 import type { Itechnology } from './types/technologyType';
-
+import Footer from './components/Footer';
 const technologyFetch=async():Promise<Itechnology[]>=>{
 const res=await fetch('/data.json');
 const data= await res.json();
@@ -25,6 +24,7 @@ function App() {
       <Suspense fallback={<h2>Loading........</h2>}>
         <Technology technologyPromise={technologyPromise}></Technology>
       </Suspense>
+      <Footer></Footer>
       
     </>
   )

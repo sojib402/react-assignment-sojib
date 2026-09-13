@@ -14,7 +14,7 @@ const AvailableTechnology = ({technologys}) => {
     setSelectedTechnology((selectedTechnology) =>
       selectedTechnology.filter((technology) => technology.id !== id)
     );
-    toast.success('Technology removed to stack');
+    toast.success('One Technology removed to stack');
   };
   const handleRemoveAll = () => {
     setSelectedTechnology([]);
