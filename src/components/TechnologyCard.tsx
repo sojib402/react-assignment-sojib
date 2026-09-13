@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaStar } from "react-icons/fa";
 import type { Itechnology } from '../types/technologyType';
 const TechnologyCard = ({technology,onClick}:{technology:Itechnology, onClick: (technology: Itechnology) => void;}) => {
