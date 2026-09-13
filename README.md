@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+Project Information
+1.Dev Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+2.Dev Stack is a web application that helps developers explore technologies and build their ideal technology stack.
 
-Currently, two official plugins are available:
+3.React,TypeScript,Tailwind CSS,DaisyUI,Vite is used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+4.3 features about your project
+1.Explore technologies by category.
 
-## React Compiler
+2.Add and remove technologies from your stack.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3.View technology details, ratings, and difficulty levels.
 
-## Expanding the Oxlint configuration
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+ React Questions & Answers
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+i. JSX: HTML-like syntax used to create UI in React.
+
+ii. Props vs State: Props are passed from parent; state is managed inside a component.
+
+iii. useState: Stores and updates data. Used for selected technologies.
+
+iv. useEffect: Handles side effects. Not used for JSON loading in this project, Suspense and fetch promise are used.
+
+v. Key prop: Helps React identify list items uniquely.
+
+vi. Conditional rendering: Shows UI based on a condition. Used for the empty stack message.
+
+vii. Parent to child: Data passes through props. child sends data back using callback functions.
+
