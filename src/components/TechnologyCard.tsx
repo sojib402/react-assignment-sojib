@@ -6,7 +6,7 @@ const TechnologyCard = ({technology,onClick}:{technology:Itechnology, onClick: (
     const [isSelected,setIsSelected]=useState(false)
     console.log(isSelected,setIsSelected,'selected items')
     return (
-       <div className="card bg-base-100 w-96 shadow-sm mt-5">
+       <div className="card bg-base-100 w-full min-w-0 shadow-sm mt-5">
            <div className='flex justify-around items-center'>
          <figure>
           

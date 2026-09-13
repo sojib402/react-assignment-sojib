@@ -1,6 +1,7 @@
 import React from 'react';
+import { FaXmark } from 'react-icons/fa6';
 
-const SelectedTechnology = ({selectedTechnology}) => {
+const SelectedTechnology = ({selectedTechnology,handleRemove,handleRemoveAll}) => {
   console.log(selectedTechnology,'selectedTechnology')
    if (selectedTechnology.length===0){
     return (
@@ -34,18 +35,38 @@ return (
       </p>
        { 
        selectedTechnology.map((technology)=>{
-
-         <div className="border border-dashed rounded-xl p-8 mt-5 text-center text-gray-400 flex">
+        return( 
+          
+         <div className="border border-dashed rounded-xl p-8 mt-5 text-center text-gray-400 flex justify-between items-center">
+          <div>
        <img src={technology.icon} className='w-16 h-16 object-contain'/>
        <div>
-       <h2 className='font-bold text-2xl'>{technology.name}</h2>
+       <h2 className='font-bold text-2xl text-black'>{technology.name}</h2>
        <p>{technology.category}</p>
       </div>
+       </div>
+       <button
+         onClick={() => handleRemove(technology.id)}
+              className="text-2xl text-gray-400"
+            >
+              <FaXmark />
+            </button>
+      
+
       </div>
+      
+      )
        })
      
   }
+  <button
+        onClick={handleRemoveAll}
+        className="w-full border border-red-400 text-red-500 rounded-xl py-3 mt-8 font-bold"
+      >
+        Remove All
+      </button>
     </div>
+    
     )
       
       

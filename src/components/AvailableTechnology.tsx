@@ -9,6 +9,15 @@ const AvailableTechnology = ({technologys}) => {
     setSelectedTechnology((selectedTechnology)=>[...selectedTechnology,technology])
 
    }
+   const handleRemove = (id: string) => {
+    setSelectedTechnology((selectedTechnology) =>
+      selectedTechnology.filter((technology) => technology.id !== id)
+    );
+  };
+  const handleRemoveAll = () => {
+    setSelectedTechnology([]);
+  };
+
     
     return (
         <div className='grid grid-cols-12 gap-4 container mx-auto'>
@@ -28,7 +37,7 @@ const AvailableTechnology = ({technologys}) => {
            </div>
           </div>
           <div className='col-span-3'>
-            <SelectedTechnology selectedTechnology={selectedTechnology}></SelectedTechnology>
+            <SelectedTechnology selectedTechnology={selectedTechnology} handleRemove={handleRemove} handleRemoveAll={handleRemoveAll}></SelectedTechnology>
           </div>
         </div>
     );
