@@ -4,9 +4,12 @@ import TechnologyCard from './TechnologyCard';
 import SelectedTechnology from './SelectedTechnology';
 import { toast } from 'react-toastify';
 
-const AvailableTechnology = ({technologys}) => {
-   const [selectedTechnology,setSelectedTechnology]=useState([])
-   const handleAddToStack=(technology)=>{
+interface IAvailableTechnologyProps {
+  technologys: Itechnology[];
+}
+const AvailableTechnology = ({technologys}:IAvailableTechnologyProps) => {
+   const [selectedTechnology,setSelectedTechnology]= useState<Itechnology[]>([]);
+   const handleAddToStack=(technology:Itechnology)=>{
     setSelectedTechnology((selectedTechnology)=>[...selectedTechnology,technology])
     toast.success(`${technology.name} added to stack`);
    }

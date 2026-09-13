@@ -10,7 +10,8 @@ const Technology = ({technologyPromise}:technologyPromiseProps) => {
     console.log(technologys)
     return (
         <div>
-            <AvailableTechnology technologys={technologys}> </AvailableTechnology>
+            <AvailableTechnology technologys={technologys} />
+            
         </div>
     );
 };

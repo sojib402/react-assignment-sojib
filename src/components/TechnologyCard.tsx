@@ -3,8 +3,8 @@ import { FaStar } from "react-icons/fa";
 import type { Itechnology } from '../types/technologyType';
 const TechnologyCard = ({technology,onClick}:{technology:Itechnology, onClick: (technology: Itechnology) => void;}) => {
    
-    const [isSelected,setIsSelected]=useState(false)
-    console.log(isSelected,setIsSelected,'selected items')
+    const [isSelected,setIsSelected]=useState<boolean>(false);
+    
     return (
        <div className="card bg-base-100 w-full min-w-0 shadow-sm mt-5">
            <div className='flex justify-around items-center'>

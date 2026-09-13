@@ -1,7 +1,13 @@
 import React from 'react';
 import { FaXmark } from 'react-icons/fa6';
+import type { Itechnology } from '../types/technologyType';
 
-const SelectedTechnology = ({selectedTechnology,handleRemove,handleRemoveAll}) => {
+interface ISelectedTechnologyProps {
+  selectedTechnology: Itechnology[];
+  handleRemove: (id: string) => void;
+  handleRemoveAll: () => void;
+}
+const SelectedTechnology = ({selectedTechnology,handleRemove,handleRemoveAll}:ISelectedTechnologyProps) => {
   console.log(selectedTechnology,'selectedTechnology')
    if (selectedTechnology.length===0){
     return (

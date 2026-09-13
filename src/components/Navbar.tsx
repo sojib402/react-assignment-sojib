@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../assets/logo-text.png'
 const Navbar = () => {
     return (
+        <div className='sticky top-0 z-50 bg-white'>
         <div className='container mx-auto'>
         <div className='flex justify-between items-center gap-4 py-7'>
             <img src={Logo} alt=''/>
@@ -27,6 +28,7 @@ const Navbar = () => {
                 <a href=''>Sign In</a>
                 <button className='bg-pink-600 text-white px-6 py-2 rounded-full font-medium'>Sign Up</button>
              </div>
+        </div>
         </div>
         </div>
         
